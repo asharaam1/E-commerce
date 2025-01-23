@@ -2,6 +2,36 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.custom-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    backdrop-filter: blur(10px); /* Adds a glass-like blur effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light border at the bottom */
+    transition: background 0.3s ease; /* Smooth transition for background changes */
+}
+
+.navbar-nav .nav-link {
+    color: rgba(222, 13, 237, 0.8) ; 
+    font-weight: 600;
+    transition: color 0.3s ease; 
+}
+.navbar-nav .nav-link:hover {
+    color: rgb(178,28,249) ;
+    text-shadow: 0 0 10px rgba(222, 13, 237, 0.8), 
+    0 0 20px rgba(178, 28, 249, 0.6), 
+    0 0 30px rgba(128, 0, 128, 0.4);
+
+}
+
+.custom-navbar.scrolled {
+    background: rgba(255, 255, 255, 0.6); /* Slightly less transparent when scrolling */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow when scrolling */
+}
+
 .navbar-brand {
     font-weight: bold;
 }
@@ -22,4 +52,14 @@ body {
     font-size: 4rem;
     font-weight: bold;
     background: linear-gradient(to right, #b017fe, #faa65d);
+}
+
+@media (max-width: 500px) {
+    .hero {
+        height: 200px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
 }
